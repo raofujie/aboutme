@@ -1,0 +1,228 @@
+/* Use Crimson Text everywhere */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+body {
+    font-family: 'Crimson Text', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff; /* Change background color to white */
+    line-height: 1.6; /* Increased line height for paragraphs */
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: RGB(230,230,230); /* Change background color to white */
+}
+
+.top-section {
+    width: 100%;
+	display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+	font-size:1.2em;
+	text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #fff; /* Adjust background color as needed */
+}
+
+.bottom-section {
+    width: 100%;
+	text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #f9f9f9; /* Adjust background color as needed */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Change background color to white */
+}
+
+nav.subpages .back-home {
+    color: #DC143C; /* Set color to red */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+header h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000000;
+}
+
+header h2 {
+    font-size: 1.2em;
+    color: #000000;
+	font-weight:bold
+}
+
+nav.subpages {
+    margin-top: 0px;
+    text-align: center;
+}
+
+nav.subpages a {
+    text-decoration: none;
+    color: #DC143C; /* Set link color */
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+nav.subpages a:hover {
+    color: #000000; /* Hover color */
+}
+
+.article-section .content h3 {
+    margin-bottom: 10px;
+	font-size: 1.2em;
+	font-weight:normal;
+}
+
+.article-section .content ul {
+    margin-top: 0px;
+	list-style-type: disc;
+    padding-left: 3em;
+}
+
+.article-section .content li {
+    margin-bottom: 20px;
+	font-size:1.2em;
+	line-height:1.5em;
+}
+
+.content {
+    width: 100%;
+    text-align: left;
+}
+
+.content h3 {
+    margin-bottom: 0px;
+	font-size: 1.2em;
+	font-weight:normal
+}
+
+.content ul {
+    margin-top: 0px;
+	list-style-type: none;
+    padding-left: 3em;
+}
+
+.content li {
+    margin-bottom: 0px;
+	font-size: 1.2em;
+	list-style-type:none
+}
+
+.hanging {
+    display: block;
+    padding-left: 2em;     /* 整体向右缩进 4em */
+}
+
+/* Hyperlink styles */
+a {
+    text-decoration: none;
+    color: #DC143C; /* Set hyperlink color to blue */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:visited {
+color: #DC143C;
+} /* Keep the link color blue even after it's visited */
+
+/* dropdown */
+.dropdown {
+            margin-left: 10px; /* Adjust margin as needed */
+            position: relative; /* Ensure relative positioning for dropdown menu */
+        }
+
+.dropdown-toggle {
+            background-color: #DC143C; /* Example button background color */
+            color: white;
+            border: none;
+            padding: 3px 9px;
+            cursor: pointer;
+			font-size:1.2em;
+        }
+
+.dropdown-menu {
+    display: none;
+    position: center;
+    background-color: #fff;
+    z-index: 1;
+	border-color: #DC143C; /* Replace with your desired color code */
+    border-style: solid; /* Specify border style if not already set */
+    border-width: 1px; /* Specify border width if not already set */
+}
+
+.dropdown-menu a {
+    color: #DC143C;
+	margin-left:20px;
+	margin-right:20px;
+	text-decoration: none;
+    text-align:left;
+	display: block;
+	font-size: 1em;
+	font-style:none;
+	font-weight:normal;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.dropdown-menu a:hover {
+            color: #000000; /* Change font color on hover */
+}
+/* 1) 用统一盒模型，避免 padding/边框把元素撑出屏幕 */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* 2) 图片/媒体永远不超过屏幕宽 */
+img, video, svg { max-width: 100%; height: auto; display: block; }
+
+/* 3) 顶部固定头部（你现在就是 fixed），保持不变 */
+.sticky-top{
+  position: fixed;           /* 明确覆盖任何 sticky 写法 */
+  top: 0; left: 0; right: 0;
+  z-index: 1200;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* 4) 分栏导航可换行，避免把屏幕挤宽（“Awards and Scholarships” 在小屏会自动换行） */
+nav.subpages{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 14px;         /* 行/列间距可自行微调 */
+}
+nav.subpages a{ white-space: normal; }  /* 允许链接文本换行 */
+
+/* 5) 文本遇到长词/长链接时强制换行，杜绝超宽 */
+.content, .content p, .content li, h1, h2, h3 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* 6) 小屏把左右内边距与列表缩进收一点，给右侧留足空间 */
+@media (max-width: 480px){
+  .container{ padding: 12px; }          /* 由 20px 收到 12px */
+  .top-section{ padding: 8px 12px; }    /* 顶部左右边距小一点 */
+  .bottom-section{ padding: 8px 12px; }
+  .content ul{ padding-left: 1.5em; }   /* 列表缩进由 3em 收到 1.5em */
+}
+
+.last-updated{
+  margin-top: 0px;
+  color: #768076;
+  font-style: normal;
+  font-size: .9em;
+  line-height: 1.2;
+}

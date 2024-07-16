@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raofujie.github.io/aboutme/sitemap.xml

@@ -1,0 +1,147 @@
+/* Use Crimson Text everywhere */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* ===== Vars & base ===== */
+:root{
+  --maxw: 1000px;
+  --padx: clamp(16px, 3vw, 32px);
+  --pady: clamp(14px, 3vh, 24px);
+  --brand: #DC143C;
+}
+
+*,*::before,*::after{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: 'Crimson Text', serif;
+  color:#000;
+  background:#fff;
+  line-height:1.5;
+  overflow-y:auto;
+}
+
+.visually-hidden{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* ===== Layout ===== */
+.page{
+  min-height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+@media (max-height: 720px){
+  .page{ align-items:flex-start; padding-top:12px; }
+}
+
+.container{
+  width:min(var(--maxw), 94vw);
+  padding:var(--pady) var(--padx);
+  display:grid;
+  grid-template-columns:minmax(320px, 38%) 1fr;
+  column-gap:60px;
+  align-items:start;
+}
+
+/* ===== Left column ===== */
+.left{ align-self:start; }
+.figure{ display:inline-block; margin:0; }
+.profile{
+  display:block;
+  width:clamp(320px, 36vw, 380px);
+  height:auto;
+  object-fit:cover;
+  border-radius:0;
+  margin:0;
+}
+.id-caption{
+  margin-top:0.5em;
+  color:grey;
+  font-style:italic;
+  line-height:1.35;
+  font-size:0.8em;
+  display:block;
+  width:100%;
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+
+/* ===== Right column ===== */
+.right{ display:flex; flex-direction:column; align-items:flex-start; min-width:0; }
+
+.short-bio{ font-size:1.2em; text-align:left; }
+.short-bio p{ margin:15px 0; }
+.short-bio p:first-child{ margin-top:0; }
+
+.nav-buttons{ margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; }
+.nav-buttons a{
+  text-decoration:none; color:var(--brand);
+  font-size:1.2em; padding:8px 16px;
+  border:1px solid var(--brand); border-radius:8px;
+  transition:background .2s,color .2s;
+}
+.nav-buttons a:hover{ background:var(--brand); color:#fff; }
+
+.contact-info{
+  margin-top:18px; text-align:left; color:#000; font-style:normal; font-size:0.8em; line-height:1em;
+}
+.contact-info p{ margin:6px 0; }
+
+a{ color:var(--brand); text-decoration:none; }
+a:visited{ color:var(--brand); }
+
+.last-updated{
+  margin-top:8px;
+  font-size:0.8em;
+  color:grey;
+  text-align:left;
+}
+
+/* ===== Landscape tweaks ===== */
+@media (orientation: landscape){
+  .container{ column-gap:60px; align-items:center; }
+  .left, .right{ align-self:center; }
+}
+
+/* ===== Portrait / narrow screens ===== */
+@media (orientation: portrait), (max-width: 768px){
+  .page{ align-items:flex-start; padding-top:12px; }
+  .container{
+    grid-template-columns:1fr;
+    row-gap:clamp(12px, 2vh, 16px);
+    column-gap:0;
+  }
+
+  .left{ justify-self:center; width:100%; }
+  .figure{ display:block; margin:0 auto; max-width:420px; }
+  .profile{
+    display:block;
+    width:100%;
+    max-width:420px;
+    height:auto;
+    margin:0 auto;
+    object-fit:cover;
+    border-radius:0;
+  }
+
+  .short-bio, .id-caption{ width:100%; max-width:100%; }
+  .short-bio p, .id-caption{ word-break:normal; overflow-wrap:anywhere; }
+  .right{ align-items:flex-start; text-align:left; }
+
+  .short-bio p:nth-of-type(3){
+    display:block; font-size:0; line-height:1.4; margin:10px 0;
+  }
+  .short-bio p:nth-of-type(3) a{
+    display:block; font-size:1.2rem; margin:2px 0; width:fit-content;
+  }
+  .short-bio p:nth-of-type(3) a:last-child{ margin-bottom:0; }
+
+  .nav-buttons{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; justify-content:unset;
+  }
+  .nav-buttons a{ width:100%; text-align:center; }
+}
+
+/* ===== Images ===== */
+img{ display:block; max-width:100%; height:auto; }
