@@ -1,0 +1,140 @@
+body {
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.upper-half {
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.upper-half img {
+    width: 50%; /* Set image width to 50% */
+    height: auto;
+    object-fit: cover;
+    margin-top: -20px; 
+}
+
+.lower-half {
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.short-bio {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.2em;
+	font-size: 1.2em;
+}
+p {
+    margin: 12px; /* Adjust the value as needed */
+}
+
+.contact-info p {
+	color:grey
+}
+
+.nav-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #DC143C;
+    font-size: 1.2em;
+    margin: 5px; /* Margin on all sides */
+    padding: 10px 20px; 
+    border: 0.5px solid #DC143C;
+    transition: background 0.3s;
+}
+
+.nav-buttons a:hover {
+    background: #DC143C;
+    color: white;
+}
+
+.contact-info {
+    margin-top: 10px;
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    list-style-type:none;
+    font-size: 0.9em; /* Adjusted for better readability */
+	font-weight: normal;
+}
+
+/* Hyperlink styles */
+a {
+    font-weight:normal;
+	text-decoration: none;
+    color: #DC143C; /* Set hyperlink color to blue */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+a:visited {
+color: #DC143C;
+} /* Keep the link color blue even after it's visited */
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    .short-bio, .contact-info {
+        width: 100%; /* Full width for tablets */
+        text-align: center; /* Center text on tablets */
+    }
+}
+
+/* Styles for smartphones */
+@media (max-width: 480px) {
+	body {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto; /* Adjust height for scrolling */
+    }
+    .upper-half img {
+        width: 100%; /* Set image width to 100% on smartphones */
+    }
+    .short-bio {
+        width: 100%;
+        text-align: left; /* Center text on phones */
+    }
+	.contact-info {
+        width: 100%;
+        text-align: center; /* Center text on phones */
+    }
+	.nav-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align vertically stacked buttons */
+    }
+    .nav-buttons a {
+        width: auto; /* Let buttons size to content */
+        margin: 10px 0; /* Increased margin for vertical stacking */
+    }
+}

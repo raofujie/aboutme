@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+	<title>Services - Fujie Rao</title>
+    <link rel="stylesheet" href="styles_S.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+<div class="sticky-top">
+        <div class="top-section">
+        <p><strong>Services</strong> of Fujie Rao</p>
+        <div class="dropdown">
+            <button class="dropdown-toggle" id="dropdownMenuButton">+</button>
+            <div class="dropdown-menu" id="myDropdown">
+                <a href="index.html"><em>Home</em></a>
+                <a href="Experience.html"><em>Careers</em></a>
+                <a href="Research.html"><em>Research</em></a>
+                <a href="Teaching.html"><em>Teaching</em></a>
+                <a href="Services.html"><em>Services</em></a>
+            </div>
+        </div>
+    </div>
+		
+        <div class="bottom-section">
+            <nav class="subpages">
+                    <a href="#academic-services">Academic</a>
+                    <a href="#Affiliation">Affiliation</a>
+                    <a href="#Social-Services">Social</a>
+        </div>
+    </div>
+
+<!-- Reviewer Section -->
+<div id="academic-services" class="container">
+    <main>
+        <header>
+            <h2>Academic Services</h2>
+        </header>
+        <div class="content">
+<h3><strong>Reviewer for Journals</strong></h3>
+<ul>
+        <li>Nature Cities</li>
+		<li>Journal of Planning Education and Research</li>
+        <li>Building and Environment</li>
+        <li>Cities</li>
+        <li>Geography Compass</li>
+        <li>Housing Studies</li>
+		<li>Tourism Geographies</li>
+        <li>Applied Geography</li>
+		<li>Environment and Planning B</li>
+        <li>Urban Research and Practice</li>
+        <li>Urban Design International</li>
+        <li>Urban Morphology</li>
+        <li>Sustainable Cities and Society</li>
+        <li>Journal of Asian Architecture and Building Engineering</li>
+        <li>Planning Practice and Research</li>
+</ul>
+
+<h3><strong>Reviewer for Research Funding</strong></h3>
+<ul>
+    <li>National Natural Science Foundation of China</li>
+    <li>Mitacs Accelerate Research Program, Canada</li>
+</ul>
+
+            </div>
+    </main>
+</div>
+
+<!-- Affiliation Section -->
+<div id="Affiliation" class="container">
+    <main>
+        <header>
+            <h2>Affiliation</h2>
+        </header>
+        <div class="content">
+<h3>2024/01 - present</h3>
+<ul>
+    <li><strong>Faculty Member</strong><br> International Association for China Planning (IACP)</li>
+</ul>
+
+<h3>2023/08 - present</h3>
+<ul>
+    <li><strong>Faculty Member</strong><br> The Geographical Society of China</li>
+</ul>
+
+<h3>2023/05 - present</h3>
+<ul>
+    <li><strong>Professional Member</strong><br> The Architectural Society of China (Urban Design Section)</li>
+</ul>
+
+<h3>2021/05 - present</h3>
+<ul>
+    <li><strong>Faculty Member</strong><br> Association of Collegiate Schools of Planning (ACSP)</li>
+</ul>
+
+        </div>
+    </main>
+</div>
+
+
+<!-- Social-Services Section -->
+<div id="Social-Services" class="container">
+    <main>
+        <header>
+            <h2>Social Services</h2>
+        </header>
+        <div class="content">
+<h3><em>2024 - 2026</em>, <strong>Scholarship Donation Liaison</strong></h3>
+<ul>
+    <li><a href="https://news.sjtu.edu.cn/zhxw/20230328/180469.html" target="_blank">Scholarship for Innovative Design Talents</a><br>
+        Donated by Huahui Group; 450,000 RMB
+    </li>
+</ul>
+
+<h3><em>2024/04/19</em>, <strong>Discussant with Dyson</strong></h3>
+<ul>
+    <li><a href="https://designschool.sjtu.edu.cn/dynamic/news/detail/662652132303d5102da77f94" target="_blank">Roundtable Discussion</a>: Local Practice and Global insights of Sustainable Design<br>
+        Co-organised by the School of Design at SJTU and Dyson<br>
+    </li>
+</ul>
+
+<h3><em>2022/11 - 2023/11</em>, <strong>Curator</strong></h3>
+<ul>
+    <li>Member of the Curatorial Team for the China Pavilion<br>
+        18th International Architecture Exhibition of <a href="https://news.sjtu.edu.cn/jdyw/20230522/183209.html" target="_blank">La Biennale di Venezia</a>
+		</li>
+</ul>
+
+<h3><em>2021/12/05</em>, <strong>Discussant with Gensler</strong></h3>
+<ul>
+    <li>University-&-Industry Collaboration for Arts & Design Education: A <a href="https://designschool.sjtu.edu.cn/international/cf19d6366086e5daf5911768b5c4c3d3/detail/61b30dbbfa68077ca8e1a646" target="_blank">Dialogue</a> between the School of Design at SJTU and Gensler<br>
+        FutureLab Annual Event, West Bund, Shanghai
+    </li>
+</ul>
+
+        </div>
+    </main>
+</div>
+
+
+ <!-- Rest of your content -->
+    <div class="container">
+        <main>
+            <!-- Other sections -->
+            
+            <!-- Link back to homepage -->
+            <div class="back-home">
+                <a href="index.html">Back to Home</a>
+            </div>
+        </main>
+        <footer>
+            <!-- Footer content if needed -->
+        </footer>
+    </div>
+</body>
+</html>
+
+  <!-- jQuery for smooth scrolling -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Smooth scrolling for anchor links
+    $('nav.subpages a').on('click', function(e) {
+        var target = $(this).attr('href');
+
+        // Allow default behavior for "Back to Home" link
+        if (target === 'index.html') {
+            return;
+        }
+
+        // Prevent default behavior for internal links
+        e.preventDefault();
+        var $targetElement = $(target);
+        if ($targetElement.length) {
+            var offset = $targetElement.offset().top - $('.sticky-top').outerHeight();
+            $('html, body').animate({
+                scrollTop: offset
+            }, 600); // Adjust scroll speed as needed
+        } else {
+            console.error('Target element not found:', target);
+        }
+    });
+});
+</script>
